@@ -33,6 +33,11 @@ class Student
       DB[:conn].execute(sql)
   end
 
+  def self.drop_table
+    sql = "DROP TABLE IF EXISTS students"
+    DB[:conn].execute(sql)
+  end
+
   def self.new_from_db(row)
     new_student = Student.new
     new_student.id = row[0]
