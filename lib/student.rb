@@ -8,8 +8,9 @@ class Student
     @grade = grade
   end
 
-  def self.create_table
-
+  def self.create_table(name:, grade:)
+    new_student = Student.new(name, grade)
+    new_student
   end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
