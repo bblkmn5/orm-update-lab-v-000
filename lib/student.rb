@@ -38,6 +38,10 @@ class Student
     end
   end
 
+  def self.create(name:, grade:)
+  end
+
+
   def self.new_from_db(row)
     new_student = Student.new
     new_student.id = row[0]
