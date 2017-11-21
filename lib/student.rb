@@ -29,6 +29,8 @@ class Student
         name TEXT,
         grade TEXT
       )
+      SQL
+      DB[:conn].execute(sql)
   end
 
   def self.new_from_db(row)
