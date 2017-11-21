@@ -57,19 +57,15 @@ class Student
       SELECT * FROM students
       WHERE name = ?
       LIMIT 1
-      SQL
+    SQL
 
-      DB[:conn].execute(sql, name).map do |row|
-        self.new_from_db(row)
-      end.first
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 
   def update
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
-  # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]
-
-
 end
