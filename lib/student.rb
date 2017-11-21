@@ -49,7 +49,7 @@ class Student
     id = row[0]
     name = row[1]
     grade = row[2]
-    self.new(id, name, grade)
+    Student.new(id, name, grade)
   end
 
   def self.find_by_name(name)
