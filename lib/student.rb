@@ -21,7 +21,7 @@ class Student
     end
   end
 
-  def self.create_table(name:, grade:)
+  def self.create_table(:name, :grade)
     new_student = Student.new(name, grade)
     new_student.save
     new_student
